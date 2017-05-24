@@ -30,7 +30,7 @@ public class Main_new {
 
         System.out.println("Please enter your desired board size: ");
         int size = scan.nextInt();
-        Board board = new Board(size);
+        Board board = new Board(size, 0, 0);
 
 
         Object[][] map = new Object[board.size()][board.size()];
@@ -40,6 +40,9 @@ public class Main_new {
             }
         }
         int counter = 0;
+        for (int i=0; i<size; i++)
+    		System.out.print("  " + i);
+        System.out.println("");
         for(Object[] rows : map) {
             System.out.println("" + counter + Arrays.toString(rows));
             counter++; 
